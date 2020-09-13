@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter  , Switch , Route} from 'react-router-dom';
 import './App.css';
 
+
+import Login from './pages/login/login';
+import Admin from './pages/admin/admin';
 function App() {
   return (
-    <>
-      <h1>heheheh</h1>
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path = "/" component = { Login }/>
+        <Route path = "/Admin" component = { Admin }/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
